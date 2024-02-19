@@ -79,9 +79,14 @@ def is_safe_command(cmd):
 
 ```(gpt)
 
-In Linux, /proc/<PID>/fd is a directory that contains symbolic links to the file descriptors opened by the process with the corresponding process ID (PID). Each entry in this directory represents a file descriptor (fd) of the process.
+In Linux, /proc/<PID>/fd is a directory that contains symbolic links to the file
+descriptors opened by the process with the corresponding process ID (PID).
+Each entry in this directory represents a file descriptor (fd) of the process.
 
-A file descriptor is a non-negative integer used to uniquely identify an open file within a process. It serves as a reference to a file or other input/output resource, such as a socket or a pipe.
+
+A file descriptor is a non-negative integer used to uniquely identify
+an open file within a process. It serves as a reference to a file or
+other input/output resource, such as a socket or a pipe.
 
 ```
 
