@@ -1,8 +1,8 @@
-# name : RSA++
-# category : crypto
-# author: Gourav Suram
+# Challenge name : RSA++
+### category : crypto
+### author: Gourav Suram
 
-# desc
+### desc
 
 > can you check if my RSA is safe or not.
 
