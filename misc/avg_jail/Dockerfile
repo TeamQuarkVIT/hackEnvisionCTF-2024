@@ -6,7 +6,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 
-COPY chall.py /challenge/
+COPY src/chall.py /challenge/
 WORKDIR /challenge
 
 EXPOSE 1337
