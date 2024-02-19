@@ -2,14 +2,14 @@
 ### category : crypto
 ### author: Gourav Suram
 
-### desc
+### description
 
 > can you check if my RSA is safe or not.
 
 
 # Writeup
 
-### Encryption file
+#### Encryption file
 
 ```py
 
@@ -33,7 +33,7 @@ print("e = ", e)
 ```
 
 
-### TL;DR
+#### TL;DR
 
 ```
 
@@ -45,7 +45,7 @@ then c2 - c1 and n have common factor p so we can use gcd to find the prime
 ```
 
 
-## Solve script
+### Solve script
 
 ```py
 
@@ -68,3 +68,7 @@ flag = pow(c1, d, n)
 print(long_to_bytes(flag).decode())
 
 ```
+
+#### Flag
+
+`quarkCTF{is_r5a-secur3d??}`
