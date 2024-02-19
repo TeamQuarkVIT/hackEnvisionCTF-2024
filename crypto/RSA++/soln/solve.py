@@ -1,54 +1,3 @@
-# name : RSA++
-# category : crypto
-# author: Gourav Suram
-
-# desc
-
-> can you check if my RSA is safe or not.
-
-
-# Writeup
-
-### Encryption file
-
-```py
-
-from Crypto.Util.number import *
-from secret import flag
-
-flag = bytes_to_long(flag)
-
-p = getPrime(512)
-q = getPrime(512)
-n = p * q
-e = 65537
-
-c1 = pow(flag, e, n)
-c2 = pow(flag, e, p)
-
-print("n = ", n)
-print("c1 = ", c1)
-print("c2 = ", c2)
-print("e = ", e)
-```
-
-
-### TL;DR
-
-```
-
-c1 = flag^e + kn
-c2 = flag^e + dp
-so c2 - c1 = p(d - kq)
-then c2 - c1 and n have common factor p so we can use gcd to find the prime
-
-```
-
-
-## Solve script
-
-```py
-
 from Crypto.Util.number import *
 from math import gcd
 
@@ -67,4 +16,3 @@ d = pow(e, -1, phi)
 flag = pow(c1, d, n)
 print(long_to_bytes(flag).decode())
 
-```
