@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+
+   misc_projail:
+        build: .
+        image: misc_projail:latest
+        hostname: misc_projail
+        container_name: misc_projail
+        ports:
+          - "65322:1337/tcp"
+

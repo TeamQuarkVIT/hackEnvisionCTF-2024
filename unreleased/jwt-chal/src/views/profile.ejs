@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+   <h1>
+
+       Hello <%= name %>
+       <br>
+       <button onclick="getAuthCode()">Generate Authcode</button>
+       <br>
+
+       <a href="/update-username">Update Username</a>
+   </h1>
+</body>
+    <script>
+        async function getAuthCode(){
+            const response = await fetch('http://localhost:1337/get-auth-code')
+            const data = await response.json();
+            alert(data)
+        }
+
+    </script>
+
+
+</html>

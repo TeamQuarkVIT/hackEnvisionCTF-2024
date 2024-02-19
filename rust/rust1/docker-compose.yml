@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+
+   rust_timetrial:
+        build: .
+        image: rust_timetrial:latest
+        hostname: rust_timetrial
+        container_name: rust_timetrial
+        ports:
+          - "65331:1337/tcp"

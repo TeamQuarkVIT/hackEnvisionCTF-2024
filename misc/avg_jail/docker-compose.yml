@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+
+   misc_jail:
+        build: .
+        image: misc_avgjail:latest
+        hostname: misc_avgjail
+        container_name: misc_avgjail
+        ports:
+          - "65321:1337/tcp"
+

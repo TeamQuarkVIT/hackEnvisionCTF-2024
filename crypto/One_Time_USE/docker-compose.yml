@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+
+   crypto_oneTime:
+        build: .
+        image: crypto_onetimeuse:latest
+        hostname: crypto_onetimeuse
+        container_name: crypto_onetimeuse
+        ports:
+          - "65310:1337/tcp"

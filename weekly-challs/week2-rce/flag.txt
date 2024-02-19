@@ -1,0 +1,1 @@
+quarkCTF{cmd-1njection-sUr3_is-harmfULL}

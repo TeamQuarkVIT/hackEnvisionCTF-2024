@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+
+   rust_password:
+        build: .
+        image: rust_password:latest
+        hostname: rust_password
+        container_name: rust_password
+        ports:
+          - "65333:1337/tcp"

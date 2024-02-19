@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+    evil_quark:
+        build: .
+        image: evil_quark:latest
+        mem_limit: 128m
+        cpus: 0.5
+        storage_opt:
+              size: 128m
+        hostname: evil_quark
+        container_name: evil_quark
+        networks:
+           challenge_net:
+
+networks:
+  challenge_net:
+    name: chal_subnet
+    external: true

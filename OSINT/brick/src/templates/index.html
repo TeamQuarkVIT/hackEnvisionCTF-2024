@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hackEnvision CTF company</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+z68l24b7BKbj5Rr+ok4p1zcymAWladI4+76PVC" crossorigin="anonymous">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-control {
+            border: 1px solid #ced4da; /* Add a border */
+            border-radius: 4px; /* Rounded corners */
+            padding: 10px; /* Add some padding */
+            margin-bottom: 15px; /* Add space between inputs */
+            width: 100%; /* Full width */
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+        .form-control:focus {
+            border-color: #80bdff; /* Add focus effect */
+            outline: 0; /* Remove outline */
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Add focus shadow */
+        }
+        .btn-primary {
+            width: 100%; /* Full width button */
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1 class="text-center mb-4">hackEnvision CTF company</h1>
+        {% if error %}
+            <script>alert('Wrong email or TOTP')</script>
+        {% endif %}
+        <form method="post">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="otp" class="form-label">Enter OTP:</label>
+                <input type="text" class="form-control" id="otp" name="otp" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+

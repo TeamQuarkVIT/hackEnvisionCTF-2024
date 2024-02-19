@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+
+   pwn_chall2:
+        build: .
+        image: pwn_chall2:latest
+        hostname: pwn_chall2
+        container_name: pwn_chall2
+        ports:
+          - "65302:1337/tcp"

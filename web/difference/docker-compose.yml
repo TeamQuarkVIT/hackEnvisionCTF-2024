@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+
+   difference:
+        build: .
+        image: web_difference:latest
+        mem_limit: 512m
+        cpus: 0.5
+        storage_opt:
+              size: 1G
+        hostname: web_difference
+        container_name: web_difference
+        networks:
+           challenge_net:
+
+networks:
+  challenge_net:
+    name: chal_subnet
+    external: true

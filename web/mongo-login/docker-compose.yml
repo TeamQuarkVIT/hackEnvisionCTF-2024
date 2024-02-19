@@ -1,0 +1,45 @@
+version: "3.8"
+
+services:
+    mongodb:
+        image: mongo:7.0.5-jammy
+        container_name: mongo_login_mongo
+        environment:
+            - MONGO_INITDB_DATABASE=admin
+            - MONGO_INITDB_ROOT_USERNAME=admin
+            - MONGO_INITDB_ROOT_PASSWORD=admin
+        volumes:
+            - mongodb:/data/db
+            - mongoconfig:/data/configdb
+        networks:
+            - mongo_net
+
+    mongo_login:
+        build: .
+        image: mongo_login:latest
+        mem_limit: 512m
+        cpus: 0.5
+        storage_opt:
+            size: 1G
+        hostname: mongo_login
+        container_name: mongo_login
+        networks:
+            - challenge_net
+            - mongo_net
+        environment:
+            - MONGO_URI=mongodb+srv://apoorvavpendse:8w1T71CEHzB7LHbn@cluster0.uu8eihp.mongodb.net/
+            - PORT=4000
+        depends_on:
+            - mongodb
+
+volumes:
+    mongodb:
+    mongoconfig:
+
+networks:
+    challenge_net:
+        name: chal_subnet
+        external: true
+    mongo_net:
+        name: mongo_net
+

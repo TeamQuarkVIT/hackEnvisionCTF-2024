@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Execution</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Additional Custom Styles */
+        .container-fluid {
+            padding: 20px;
+        }
+        .form-box {
+            width: 45%;
+            float: left;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+            background-color: #f9f9f9;
+        }
+        .output-box {
+            width: 45%;
+            float: left;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .divider {
+            height: 100%;
+            border-right: 1px solid #ccc;
+            margin-right: 20px;
+        }
+        .btn-execute:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="form-box">
+            <h1>Execute Command</h1>
+            <form id="commandForm">
+                <div class="form-group">
+                    <label for="cmd">Command:</label>
+                    <select class="form-control" id="cmd" name="cmd">
+                        <option value="ls">ls</option>
+                        <option value="grep">grep</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="arg">Argument:</label>
+                    <select class="form-control" id="arg" name="arg">
+                        <option value="-la">-la</option>
+                        <option value="-i">-i</option>
+                        <option value="-C">-C</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="path">Path:</label>
+                    <input type="text" class="form-control" id="path" name="path" placeholder="/app/files/">
+                </div>
+                <button type="submit" class="btn btn-primary btn-execute">Execute</button>
+            </form>
+        </div>
+        <div class="divider"></div>
+        <div class="output-box">
+            <h1>Output</h1>
+            <div id="response"></div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById("commandForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            var form = event.target;
+            var formData = new FormData(form);
+            fetch("/execute", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    document.getElementById("response").innerText = data.error;
+                } else {
+                    document.getElementById("response").innerText = data.output;
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        });
+    </script>
+</body>
+</html>
+
+

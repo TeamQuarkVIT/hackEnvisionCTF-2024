@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Execution</title>
+</head>
+<body>
+    <h1>Execute Command</h1>
+    <form id="commandForm">
+        <label for="cmd">Command:</label>
+        <select id="cmd" name="cmd">
+            <option value="ls">ls</option>
+            <option value="grep">grep</option>
+        </select>
+        <label for="arg">Argument:</label>
+        <select id="arg" name="arg">
+            <option value="-la">-la</option>
+            <option value="-i">-i</option>
+            <option value="-C">-C</option>
+        </select>
+        <label for="path">Path:</label>
+        <input type="text" id="path" name="path" placeholder="/app/files/">
+        <button type="submit">Execute</button>
+    </form>
+    <div id="response"></div>
+    <script>
+        document.getElementById("commandForm").addEventListener("submit", function(event){
+            event.preventDefault();
+            var form = event.target;
+            var formData = new FormData(form);
+            fetch("/execute", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    document.getElementById("response").innerText = data.error;
+                } else {
+                    document.getElementById("response").innerText = data.output;
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        });
+    </script>
+</body>
+</html>
+

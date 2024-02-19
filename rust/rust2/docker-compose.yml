@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+
+   rust_maalik:
+        build: .
+        image: rust_maalik:latest
+        hostname: rust_maalik
+        container_name: rust_maalik
+        ports:
+          - "65332:1337/tcp"

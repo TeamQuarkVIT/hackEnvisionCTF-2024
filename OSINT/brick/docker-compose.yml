@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+
+   osnitbrick:
+        build: .
+        image: osint_brick:latest
+        mem_limit: 512m
+        cpus: 0.5
+        storage_opt:
+              size: 1G
+        hostname: osint_brick
+        container_name: osint_brick
+        networks:
+           challenge_net:
+
+networks:
+  challenge_net:
+    name: chal_subnet
+    external: true

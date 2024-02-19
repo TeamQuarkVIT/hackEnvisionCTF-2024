@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+
+   web_sanity:
+        build: .
+        image: web_sanity:latest
+        mem_limit: 512m
+        cpus: 0.5
+        storage_opt:
+              size: 1G
+        hostname: web_sanity
+        container_name: web_sanity
+        networks:
+           challenge_net:
+
+networks:
+  challenge_net:
+    name: chal_subnet
+    external: true

@@ -1,0 +1,4 @@
+flask==3.0.2 
+pyotp==2.9.0
+urllib3==2.2.0
+waitress

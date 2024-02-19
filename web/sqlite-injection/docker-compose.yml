@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+   sqlite_injection:
+        build: .
+        image: sqlite_injection:latest
+        mem_limit: 512m
+        cpus: 0.5
+        storage_opt:
+              size: 512m
+        hostname: sqlite_injection
+        container_name: sqlite_injection
+        networks:
+           challenge_net:
+
+networks:
+  challenge_net:
+    name: chal_subnet
+    external: true

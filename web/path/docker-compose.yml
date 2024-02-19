@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+   difference:
+        build: .
+        image: web_path:latest
+        mem_limit: 512m
+        cpus: 0.5
+        storage_opt:
+            size: 1G
+        container_name: web_path
+        networks:
+            challenge_net:
+
+networks:
+  challenge_net:
+    name: chal_subnet
+    external: true

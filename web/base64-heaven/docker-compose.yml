@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+   base64_heaven:
+        build: .
+        image: base64_heaven:latest
+        mem_limit: 128m
+        cpus: 0.5
+        storage_opt:
+              size: 128m
+        hostname: base64_heaven
+        container_name: base64_heaven
+        networks:
+           challenge_net:
+
+networks:
+  challenge_net:
+    name: chal_subnet
+    external: true
