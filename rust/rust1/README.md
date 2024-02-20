@@ -33,8 +33,11 @@
    let ee_string = fn4(&e_string, key);
    let dd_string = fn4(&ee_string, key); 
    ```
-   Therefore, the result gets reverted even if the key is dynamically generated based on System's time from 
-   the UNIX Epoch. Lastly, the flag is revealed when the player enters the length of the result. 
+   Therefore, the result gets reverted even if the key is dynamically generated based on the System's time 
+   from the UNIX Epoch. Lastly, the flag is revealed after
+   "simple base64 encoding - some misc. operations - 
+   base64 decoding" -
+   is done by the player and the player enters the length of the result. 
 
 ### Flag
 `quarkCTF{time_is_an_illusion}`
