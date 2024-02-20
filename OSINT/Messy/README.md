@@ -2,8 +2,13 @@
 - Difficulty: Easy
 - Category: OSINT
 
-## Description
+## Author
+- [0xHarshSec](0xharshsec.me)
 
+## Description
+> Find the hidden hint and name the person who said it replace whitespaces with _ name is not case sensitive.
+
+> Flag Format: quarkCTF{nameoftheperson}
 
 ### Writeup 
 - In this challenge, we are provided with an image and a description saying the flag is the name of the person who said it, now the picture is of Messi but if we take a look at the EXIF metadata we see a comment ```The little boy from Rosario, Santa Fe, has just pitched up in heaven. He climbs into a galaxy of his own. He has his crowning moment and of course he is not alone.```
