@@ -1,6 +1,6 @@
 # Challenge Name: Maalik
 ### Category: Rust
-### Author: Piyush Waghulde
+### Author: [Piyush Waghulde](https://github.com/piyushw0203)
 
 ### Description
 
