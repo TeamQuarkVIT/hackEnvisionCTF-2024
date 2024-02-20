@@ -5,7 +5,13 @@
 ## Author 
 - [0xHarshSec](https://0xharshsec)
 
-## Writeup
+## Description
+> Hey! have you been checking out our event site lately? I know for a fact that Earth has been rotating Multiple times.
+What was it again Around the world in 10 days? idk
+
+> Hack Envison Site: hckvision.teamquark.com
+
+### Writeup
 - We are provided with a favicon.png image first looking at it reveals nothing but there is a secret.txt hidden inside and can be extracted using steghide but requires a passphrase to extract it.
 
 ![image](https://github.com/TeamQuarkVIT/hackEnvisionCTF-2024/assets/84784218/c55c1309-785d-44d5-a337-27a13b91cc35)
