@@ -3,7 +3,15 @@
 - Difficulty: Easy
 - Category: Web-Exploitation
 
-## Writeup
+## Author
+- [0xHarshSec](https://0xharshsec.me)
+
+## Description
+> Well are you a good spy? We gave you access to secret chat room you can retrieve the txt chat files and read the secrets hidden inside.
+Remember the files are named in numbers like flag/01.txt
+There's No Time To Die
+
+### Writeup
 
 - We provided no files for this challenge as it was easy and guessable. The name of the challenge gives us a hint *James Secretan* was the cover name for *James Bond*.
 - We'll take a look at the Description:
