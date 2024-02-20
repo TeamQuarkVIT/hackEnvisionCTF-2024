@@ -1,4 +1,8 @@
 # Dynamo
+- Difficulty: Easy
+- Category: Stegnography and Forensics
+
+## Writeup
 - The name of the challenge is Dynamo as he was a magician and this challenge is related to magic numbers, first we'll open the file in an hex editor
 
 ![image](https://github.com/TeamQuarkVIT/hackEnvisionCTF-2024/assets/84784218/00e2609b-a77b-40c9-aec6-76f7a9c097af)
