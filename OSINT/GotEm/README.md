@@ -15,7 +15,7 @@
 
 ![image](https://github.com/TeamQuarkVIT/hackEnvisionCTF-2024/assets/84784218/fde2d4b1-f4ff-4af5-bea2-8cbc11d4faa6)
 
--If we see his latest tweet he said his reddit is rekt so we try to find him on reddit, and eventually we do come across his account [Reddit](https://www.reddit.com/user/V3ng3_nc3/)
+- If we see his latest tweet he said his reddit is rekt so we try to find him on reddit, and eventually we do come across his account [Reddit](https://www.reddit.com/user/V3ng3_nc3/)
 
 ![image](https://github.com/TeamQuarkVIT/hackEnvisionCTF-2024/assets/84784218/0126bf58-d02e-40f5-ac02-1150f22d43c9)
 
