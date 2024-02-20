@@ -1,6 +1,9 @@
 # Merry-Go-Round
 - Difficulty: Medium
-- Category: Stegnography and Forensics
+- Category: Steganography and Forensics
+
+## Author 
+- [0xHarshSec](https://0xharshsec)
 
 ## Writeup
 - We are provided with a favicon.png image first looking at it reveals nothing but there is a secret.txt hidden inside and can be extracted using steghide but requires a passphrase to extract it.
