@@ -106,13 +106,13 @@ If we look at `240159166128` as four bytes we get the values `240 159 166 128`.
 
 After putting these values into a UTF-8 to Unicode converter we get: 
 
-![conversion of bytes to unicode](/images/conversion.png)
+![conversion of bytes to unicode](images/conversion.png)
 
 **The result we get is the *crab emoji*  `🦀`  which is the password**
 
 If we input `🦀` as the password, the flag will be printed.
 
-![Solving the Challenge](/images/solve.png)
+![Solving the Challenge](images/solve.png)
 
 ### **Flag: quarkCTF{3m0j1s_4r3_7h3_n3w_h13r09lyph1c5}**
 ___
