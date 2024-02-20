@@ -3,7 +3,7 @@
 - Category: OSINT
 
 ## Author
-- [0xHarshSec](0xharshsec.me)
+- [0xHarshSec](https://0xharshsec.me)
 
 ## Description
 > Find the hidden hint and name the person who said it replace whitespaces with _ name is not case sensitive.
