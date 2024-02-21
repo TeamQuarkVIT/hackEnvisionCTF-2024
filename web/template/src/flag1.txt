@@ -1,1 +1,0 @@
-quarkCTF{ssti_
