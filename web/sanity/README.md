@@ -48,7 +48,7 @@ Hmmm, so we can curl another webpages, the first thought that comes in mind in S
 - Like: we are banning `127.0.0.1` but not `127.0.0.2`....and likewise the whole subnet.
 
 
-- You can simply use Ip address from `127.0.0.2` to `127.255.255.255` to get the flag
+- You can simply use Ip address from `127.0.0.2` to `127.255.255.254` to get the flag
 - Twist:
     - You simply can't use `http://127.0.0.2/yay` to get the flag. Why?
     - It's because of the port, if you read the `app.py`, the app is running on port 5000
